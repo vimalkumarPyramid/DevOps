@@ -21,7 +21,7 @@ namespace MvcMusicStoreTests.Controllers {
 
 			Assert.IsInstanceOfType(result.Model, typeof(List<Album>),"Expected model to contain list of albums");
             //Assert.AreEqual(5,((List<Album>)result.Model).Count,"Expected 5 albums");
-            Assert.AreEqual(5, ((List<Album>)result.Model).Count, "Expected 5 albums");
+            Assert.AreEqual(6, ((List<Album>)result.Model).Count, "Expected 5 albums");
 		}
 
 		private FakeDataStore GetDataStoreWithAlbums() 
