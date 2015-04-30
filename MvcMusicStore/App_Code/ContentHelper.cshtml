@@ -1,0 +1,3 @@
+﻿@helper AlbumArt(string title, string url){
+	<img alt="@title" src="@(HttpContext.Current.Request.ApplicationPath.TrimEnd(new char[]{'/'}) + url)" />
+}

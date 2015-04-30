@@ -1,0 +1,28 @@
+syntax: glob
+*/bin/
+*/obj/
+*.suo
+*.user
+*.nupkg
+*.docstates
+_ReSharper*
+TestResults/*
+*.vsmdi
+glob:*~
+glob:NuGet.exe
+glob:*.swp
+bin/*.dll
+
+*.ncrunchsolution
+Thumbs.db
+
+UpgradeLog.*
+Backup/*
+_UpgradeReport_Files
+MvcMusicStore/Properties/PublishProfiles/ElisMvcMusicStore - FTP.pubxml
+MvcMusicStore/Properties/PublishProfiles/ElisMvcMusicStore - Web Deploy.pubxml
+
+*.ncrunchproject
+*.ncrunchsolution
+*.ncrunchsolution.user
+_NCrunch*/*

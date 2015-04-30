@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/MvcMusicStore_LoadTest" />
+  <setParameter name="MusicStoreEntities-Web.config Connection String" value="Data Source=AVL-SQL-01;Initial Catalog=LOADTEST_MVCMusicStore;User Id=mvcmusicstore;Password=mvcmusicpass;" />
+  <setParameter name="MusicStoreEntities-Web.config Provider" value="System.Data.SqlClient" />
+  <setParameter name="ApplicationServices-Web.config Connection String" value="Data Source=|DataDirectory|Membership.sdf" />
+</parameters>

@@ -1,0 +1,15 @@
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\MvcMusicStoreTests.dll.config
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\MvcMusicStoreTests.dll
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\MvcMusicStoreTests.pdb
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\MvcMusicStore.dll
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\MvcMusicStore.pdb
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\EntityFramework.xml
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\System.Web.Helpers.xml
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\System.Web.Mvc.xml
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\System.Web.Razor.xml
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\System.Web.WebPages.xml
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\obj\Debug\MvcMusicStoreTests.csprojResolveAssemblyReference.cache
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\obj\Debug\MvcMusicStoreTests.dll
+D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\obj\Debug\MvcMusicStoreTests.pdb

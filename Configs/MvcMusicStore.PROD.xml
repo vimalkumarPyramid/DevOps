@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="tiernok.com/MvcMusicStore" />
+  <setParameter name="MusicStoreEntities-Web.config Connection String" value="Data Source=|DataDirectory|MvcMusicStore.sdf" />
+  <setParameter name="MusicStoreEntities-Web.config Provider" value="System.Data.SqlServerCe.4.0" />
+  <setParameter name="ApplicationServices-Web.config Connection String" value="Data Source=|DataDirectory|Membership.sdf" />
+</parameters>
