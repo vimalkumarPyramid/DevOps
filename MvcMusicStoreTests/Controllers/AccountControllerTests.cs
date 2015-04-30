@@ -23,7 +23,7 @@ namespace MvcMusicStoreTests.Controllers {
 
 			ViewResult result = controller.LogOn() as ViewResult;
 
-            Assert.IsNotNull(null);
+            Assert.IsNotNull(result);
 		}
 
 		[TestMethod]
