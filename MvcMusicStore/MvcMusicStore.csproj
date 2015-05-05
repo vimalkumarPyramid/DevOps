@@ -363,7 +363,7 @@
   <Target Name="PublishToFileSystem"
         DependsOnTargets="PipelinePreDeployCopyAllFilesToOneFolder">
     <PropertyGroup>
-      <PublishDestination>"c:\Deploy"</PublishDestination>
+      <PublishDestination>c:\Deploy</PublishDestination>
     </PropertyGroup>
     <Error Condition="'$(PublishDestination)'==''"
            Text="The PublishDestination property must be set to the intended publishing destination." />
