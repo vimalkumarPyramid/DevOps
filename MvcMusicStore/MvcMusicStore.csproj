@@ -362,6 +362,9 @@
   <!--Solution 1-->
   <Target Name="PublishToFileSystem"
         DependsOnTargets="PipelinePreDeployCopyAllFilesToOneFolder">
+    <PropertyGroup>
+      <PublishDestination>"c:\Deploy"</PublishDestination>
+    </PropertyGroup>
     <Error Condition="'$(PublishDestination)'==''"
            Text="The PublishDestination property must be set to the intended publishing destination." />
     <MakeDir Condition="!Exists($(PublishDestination))"
@@ -371,9 +374,6 @@
       <PublishFiles Include="$(_PackageTempDir)\**\*.*" />
       <!--<PublishDestination>'c:\Deploy'</PublishDestination>-->
     </ItemGroup>
-    <PropertyGroup>
-      <PublishDestination>c:\Deploy</PublishDestination>
-    </PropertyGroup>
 
     <Copy SourceFiles="@(PublishFiles)"
           DestinationFiles="@(PublishFiles->'$(PublishDestination)\%(RecursiveDir)%(Filename)%(Extension)')"
