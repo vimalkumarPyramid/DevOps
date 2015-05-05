@@ -359,7 +359,7 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
-  <Target Name="PublishToFileSystem"
+  <!--<Target Name="PublishToFileSystem"
         DependsOnTargets="PipelinePreDeployCopyAllFilesToOneFolder">
     <Error Condition="'$(PublishDestination)'==''"
            Text="The PublishDestination property must be set to the intended publishing destination." />
@@ -373,7 +373,21 @@
     <Copy SourceFiles="@(PublishFiles)"
           DestinationFiles="@(PublishFiles->'$(PublishDestination)\%(RecursiveDir)%(Filename)%(Extension)')"
           SkipUnchangedFiles="True" />
+  </Target>-->
+  <Target Name="Build" DependsOnTargets="BuildPackage;CopyOutput" />
+
+  <Target Name="BuildPackage">
+    <MSBuild Projects="$(SolutionFile)" ContinueOnError="false" Targets="Rebuild" Properties="Configuration=$(Configuration)" />
+    <MSBuild Projects="$(ProjectFile)" ContinueOnError="false" Targets="Package" Properties="Configuration=$(Configuration)" />
   </Target>
+
+  <Target Name="CopyOutput">
+    <ItemGroup>
+      <PackagedFiles Include="$(ProjectName)\obj\$(Configuration)\Package\PackageTmp\**\*.*"/>
+    </ItemGroup>
+    <Copy SourceFiles="@(PackagedFiles)" DestinationFiles="@(PackagedFiles->'\\\inetpub\wwwroot\$(ProjectName)\$(Configuration)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>
+  
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
     <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
   </Target>
