@@ -359,6 +359,7 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
+  <!--Solution 1-->
   <!--<Target Name="PublishToFileSystem"
         DependsOnTargets="PipelinePreDeployCopyAllFilesToOneFolder">
     <Error Condition="'$(PublishDestination)'==''"
@@ -374,7 +375,9 @@
           DestinationFiles="@(PublishFiles->'$(PublishDestination)\%(RecursiveDir)%(Filename)%(Extension)')"
           SkipUnchangedFiles="True" />
   </Target>-->
-  <Target Name="Build" DependsOnTargets="BuildPackage;CopyOutput" />
+  <!--Solution 1-->
+  <!--Solution 2-->
+  <!--<Target Name="Build" DependsOnTargets="BuildPackage;CopyOutput" />
 
   <Target Name="BuildPackage">
     <MSBuild Projects="$(SolutionFile)" ContinueOnError="false" Targets="Rebuild" Properties="Configuration=$(Configuration)" />
@@ -386,7 +389,25 @@
       <PackagedFiles Include="$(ProjectName)\obj\$(Configuration)\Package\PackageTmp\**\*.*"/>
     </ItemGroup>
     <Copy SourceFiles="@(PackagedFiles)" DestinationFiles="@(PackagedFiles->'\\\inetpub\wwwroot\$(ProjectName)\$(Configuration)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>-->
+  <!--Solution 2-->
+  
+  <!--Solution 3-->
+  <PropertyGroup>
+    <YourDestinationDirectory>$(ProjectName)\obj\$(Configuration)\Package\PackageTmp\**\*.*"</YourDestinationDirectory>
+    <YourSourceDirectory>c:\Deploy</YourSourceDirectory>
+  </PropertyGroup>
+
+  <Target Name="BeforeBuild">
+    <CreateItem Include="$(YourSourceDirectory)\**\*.*">
+      <Output TaskParameter="Include" ItemName="YourFilesToCopy" />
+    </CreateItem>
+
+    <Copy SourceFiles="@(YourFilesToCopy)"
+            DestinationFiles="$(YourFilesToCopy)\%(RecursiveDir)" />
   </Target>
+  <!--Solution 3-->
+  
   
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
     <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
