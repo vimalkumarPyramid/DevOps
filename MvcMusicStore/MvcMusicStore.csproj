@@ -360,7 +360,7 @@
   <Target Name="AfterBuild">
   </Target> -->
   <!--Solution 1-->
-  <!--<Target Name="PublishToFileSystem"
+  <Target Name="PublishToFileSystem"
         DependsOnTargets="PipelinePreDeployCopyAllFilesToOneFolder">
     <Error Condition="'$(PublishDestination)'==''"
            Text="The PublishDestination property must be set to the intended publishing destination." />
@@ -369,12 +369,16 @@
 
     <ItemGroup>
       <PublishFiles Include="$(_PackageTempDir)\**\*.*" />
+      <!--<PublishDestination>'c:\Deploy'</PublishDestination>-->
     </ItemGroup>
+    <PropertyGroup>
+      <PublishDestination>c:\Deploy</PublishDestination>
+    </PropertyGroup>
 
     <Copy SourceFiles="@(PublishFiles)"
           DestinationFiles="@(PublishFiles->'$(PublishDestination)\%(RecursiveDir)%(Filename)%(Extension)')"
           SkipUnchangedFiles="True" />
-  </Target>-->
+  </Target>
   <!--Solution 1-->
   <!--Solution 2-->
   <!--<Target Name="Build" DependsOnTargets="BuildPackage;CopyOutput" />
@@ -393,7 +397,7 @@
   <!--Solution 2-->
   
   <!--Solution 3-->
-  <PropertyGroup>
+  <!--<PropertyGroup>
     <YourDestinationDirectory>$(ProjectName)\obj\$(Configuration)\Package\PackageTmp\**\*.*"</YourDestinationDirectory>
     <YourSourceDirectory>c:\Deploy</YourSourceDirectory>
   </PropertyGroup>
@@ -405,7 +409,7 @@
 
     <Copy SourceFiles="@(YourFilesToCopy)"
             DestinationFiles="$(YourFilesToCopy)\%(RecursiveDir)" />
-  </Target>
+  </Target>-->
   <!--Solution 3-->
   
   
