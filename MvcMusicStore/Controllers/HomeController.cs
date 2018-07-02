@@ -16,9 +16,12 @@ namespace MvcMusicStore.Controllers {
 		// GET: /Home/
 		public async Task<ActionResult> IndexAsync() {
 			// Get most popular albums
-			var albums = await GetTopSellingAlbumsAsync(5);
+			//var albums = await GetTopSellingAlbumsAsync(5);
 			
-			return View(albums);
+			//return View(albums);
+            List<Album> albums = new List<Album>();
+            //albums.Add(new Album { });
+            return View(albums);
 		}
 
 		private async Task<List<Album>> GetTopSellingAlbumsAsync(int count) {
