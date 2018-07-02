@@ -26,6 +26,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -360,24 +362,17 @@
   <Target Name="AfterBuild">
   </Target> -->
   <!--Solution 1-->
-  <Target Name="PublishToFileSystem"
-        DependsOnTargets="PipelinePreDeployCopyAllFilesToOneFolder">
+  <Target Name="PublishToFileSystem" DependsOnTargets="PipelinePreDeployCopyAllFilesToOneFolder">
     <PropertyGroup>
       <PublishDestination>c:\Deploy</PublishDestination>
     </PropertyGroup>
-    <Error Condition="'$(PublishDestination)'==''"
-           Text="The PublishDestination property must be set to the intended publishing destination." />
-    <MakeDir Condition="!Exists($(PublishDestination))"
-             Directories="$(PublishDestination)" />
-
+    <Error Condition="'$(PublishDestination)'==''" Text="The PublishDestination property must be set to the intended publishing destination." />
+    <MakeDir Condition="!Exists($(PublishDestination))" Directories="$(PublishDestination)" />
     <ItemGroup>
       <PublishFiles Include="$(_PackageTempDir)\**\*.*" />
       <!--<PublishDestination>'c:\Deploy'</PublishDestination>-->
     </ItemGroup>
-
-    <Copy SourceFiles="@(PublishFiles)"
-          DestinationFiles="@(PublishFiles->'$(PublishDestination)\%(RecursiveDir)%(Filename)%(Extension)')"
-          SkipUnchangedFiles="True" />
+    <Copy SourceFiles="@(PublishFiles)" DestinationFiles="@(PublishFiles->'$(PublishDestination)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="True" />
   </Target>
   <!--Solution 1-->
   <!--Solution 2-->
@@ -395,7 +390,6 @@
     <Copy SourceFiles="@(PackagedFiles)" DestinationFiles="@(PackagedFiles->'\\\inetpub\wwwroot\$(ProjectName)\$(Configuration)\%(RecursiveDir)%(Filename)%(Extension)')"/>
   </Target>-->
   <!--Solution 2-->
-  
   <!--Solution 3-->
   <!--<PropertyGroup>
     <YourDestinationDirectory>$(ProjectName)\obj\$(Configuration)\Package\PackageTmp\**\*.*"</YourDestinationDirectory>
@@ -411,8 +405,6 @@
             DestinationFiles="$(YourFilesToCopy)\%(RecursiveDir)" />
   </Target>-->
   <!--Solution 3-->
-  
-  
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
     <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
   </Target>
@@ -434,4 +426,5 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
 </Project>

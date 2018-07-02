@@ -13,3 +13,11 @@ D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTes
 D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\obj\Debug\MvcMusicStoreTests.csprojResolveAssemblyReference.cache
 D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\obj\Debug\MvcMusicStoreTests.dll
 D:\Vimal\MyProject\DevOps\tarwn-mvcmusicstore.main-a3f3c943c685\MvcMusicStoreTests\obj\Debug\MvcMusicStoreTests.pdb
+D:\DevOps\Project\DevOps\MvcMusicStoreTests\bin\Debug\MvcMusicStoreTests.dll.config
+D:\DevOps\Project\DevOps\MvcMusicStoreTests\bin\Debug\MvcMusicStoreTests.dll
+D:\DevOps\Project\DevOps\MvcMusicStoreTests\bin\Debug\MvcMusicStoreTests.pdb
+D:\DevOps\Project\DevOps\MvcMusicStoreTests\bin\Debug\MvcMusicStore.dll
+D:\DevOps\Project\DevOps\MvcMusicStoreTests\bin\Debug\MvcMusicStore.pdb
+D:\DevOps\Project\DevOps\MvcMusicStoreTests\obj\Debug\MvcMusicStoreTests.csprojResolveAssemblyReference.cache
+D:\DevOps\Project\DevOps\MvcMusicStoreTests\obj\Debug\MvcMusicStoreTests.dll
+D:\DevOps\Project\DevOps\MvcMusicStoreTests\obj\Debug\MvcMusicStoreTests.pdb
