@@ -1,0 +1,1 @@
+D:\DevOps\Project\DevOps\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
